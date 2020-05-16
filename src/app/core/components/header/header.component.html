@@ -1,0 +1,10 @@
+<header>
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <h6>Order<span>Form</span></h6>
+    <div class="header-cart">
+      <a routerLink="/home/checkout">Cart
+        <span class="badge">{{(service.products$ | async).length}}</span>
+      </a>
+    </div>
+  </div>
+</header>

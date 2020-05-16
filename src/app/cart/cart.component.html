@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-12">
+    <h3 class="mb-0">Your Cart</h3>
+    <app-products
+      [products]="(service.products$ | async)"
+      (updateBtnClick)="onProductUpdate($event)"
+      (deleteBtnClick)="onProductDelete($event)">
+    </app-products>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-4">
+    <div class="form-group">
+      <label for="cart-comments">Additional comments</label>
+      <textarea
+        id="cart-comments"
+        class="form-control"
+        aria-describedby="cardAdditionalComments"
+        [formControl]="commentsControl">
+      </textarea>
+    </div>
+  </div>
+  <div class="col-4 cart-delivery-details">
+    <h6>Delivery info</h6>
+    <span>All orders will be sent by Special Delivery, which will be insured and will need to be signed for.<br>Allow 4-6 weeks for delivery.</span>
+  </div>
+  <div class="col-4">
+    <app-checkout [products]="service.products$" (checkoutBtnClick)="onSubmitOrder($event)"></app-checkout>
+  </div>
+</div>

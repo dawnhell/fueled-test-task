@@ -1,0 +1,32 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col"></th>
+    <th scope="col">Product Name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Quantity</th>
+    <th scope="col">Remove</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of products">
+    <td>
+      <img [src]="item.imgSrc">
+    </td>
+    <td>
+      <span>{{item.name}}</span>
+      <span>{{item.ref}}</span>
+    </td>
+    <td>{{item.price | currency: '$' : 'symbol' : '1.0-2'}}</td>
+    <td>
+      <input type="number" class="form-control" [(ngModel)]="item.amount">
+      <button type="button" class="btn btn-link" (click)="onUpdateBtnClick(item)">Update</button>
+    </td>
+    <td>
+      <button type="button" class="btn close" (click)="onDeleteBtnClick(item.id)">
+        <span>&times;</span>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>

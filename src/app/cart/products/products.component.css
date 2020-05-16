@@ -1,0 +1,128 @@
+table {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  color: #FFFFFF;
+  margin-top: 78px;
+}
+
+thead {
+  flex: 0 0 auto;
+}
+
+thead,
+tbody tr:nth-of-type(even) {
+  background-color: #0B0B0B;
+}
+
+tbody {
+  flex: 1 1 auto;
+  display: block;
+  height: 330px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+table tr {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table tbody tr {
+  width: calc(100% + 16px); /*16px = scrollbar width*/
+}
+
+table th,
+table td {
+  font-weight: 400;
+  border: none;
+}
+
+table td {
+  font-size: 20px;
+  vertical-align: middle;
+  padding: 0;
+}
+
+table th {
+  padding: 12px 0;
+}
+
+tbody tr:nth-of-type(odd) td {
+  padding: 26px 0;
+}
+
+tbody tr:nth-of-type(even) input {
+  background-color: #1B1B1B;
+}
+
+th:first-of-type {
+  width: 150px;
+  border-radius: 6px 0 0 6px;
+}
+
+th:last-of-type,
+tbody tr:nth-of-type(even) td:last-of-type {
+  border-radius: 0 6px 6px 0;
+}
+
+td:first-of-type {
+  width: 150px;
+}
+
+img {
+  width: 110px;
+  height: 110px;
+  border-radius: 6px;
+}
+
+td span {
+  display: block;
+}
+
+td span:last-of-type {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+td input {
+  width: 46px;
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: #0B0B0B;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  padding: 0 10px;
+}
+
+td input::-webkit-outer-spin-button,
+td input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+td input[type=number] {
+  -moz-appearance: textfield;
+}
+
+td button.btn-link {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+td button.close {
+  float: left;
+}
+
+td button.close span {
+  font-size: 32px;
+  font-weight: 100;
+}
+
+td input:focus,
+td button:focus {
+  outline: none;
+  box-shadow: none;
+}

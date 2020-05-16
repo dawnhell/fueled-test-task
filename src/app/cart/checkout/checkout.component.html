@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-6">Sub Total</div>
+  <div class="col-6">{{subTotal | currency: '$' : 'symbol' : '1.0-2'}}</div>
+</div>
+<div class="row">
+  <div class="col-6">Tax</div>
+  <div class="col-6">{{tax | currency: '$' : 'symbol' : '1.0-2'}}</div>
+</div>
+<div class="row checkout-total">
+  <div class="col-6">Total</div>
+  <div class="col-6">{{total | currency: '$' : 'symbol' : '1.0-2'}}</div>
+</div>
+<div class="checkout-controls">
+  <button type="button" class="btn" (click)="onCheckoutBtnClick()">Checkout</button>
+  <div class="d-flex justify-content-center">
+    <span>or</span>
+    <a [routerLink]="">Continue Shopping</a>
+  </div>
+</div>

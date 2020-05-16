@@ -1,0 +1,49 @@
+.row {
+  padding: 8px 0;
+}
+
+.row div:last-of-type {
+  font-weight: 700;
+  text-align: right;
+}
+
+.checkout-total {
+  background-color: #0B0B0B;
+  border-radius: 6px;
+}
+
+.checkout-controls {
+  display: flex;
+  flex-direction: column;
+  margin-top: 42px;
+}
+
+button {
+  width: 50%;
+  align-self: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #AE0000;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  color: #FFFFFF;
+}
+
+.checkout-controls span,
+.checkout-controls a {
+  font-size: 14px;
+}
+
+.checkout-controls a {
+  color: #FFFFFF;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+.checkout-controls a:hover {
+  color: #FFFFFF;
+}
